@@ -25,6 +25,10 @@ textarea {
   white-space: pre-wrap;
 }
 
+#currentDay {
+  font-weight: bolder;
+}
+
 .time-block {
   text-align: center;
   border-radius: 15px;
@@ -36,7 +40,21 @@ textarea {
   border-top: 1px solid white;
 }
 
+.eventInput {
+  height: 100%;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 1px;
+}
+
+.fas {
+  padding: 20px;
+}
+
 .hour {
+  text-align: right;
+  padding: 8px;
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
