@@ -1,3 +1,7 @@
+function init() {
+    renderEvents();
+}
+
 // When planner is opened, current day is displayed at the top
 
 // Using Moment, current day is placed in the jumbotron
@@ -82,73 +86,115 @@ bckgrdColor(timeArray);
     function saveTimeblock1(event) {
         event.preventDefault();
         event.stopPropagation();
-        var val = $(this).closest("div.input-group").find("input[name='eventValue']").val();
-        console.log(val);
+        var eventBlock1 = $(this).closest("div.input-group").find("input[name='eventValue']").val();
+        console.log(eventBlock1);
 
-        localStorage.setItem("eventBlock1");
+        localStorage.setItem("eventBlock1", JSON.stringify(eventBlock1));
     }
 
     function saveTimeblock2(event) {
         event.stopPropagation();
-        var val = $(this).closest("div.input-group").find("input[name='eventValue']").val();
-        console.log(val);
+        var eventBlock2 = $(this).closest("div.input-group").find("input[name='eventValue']").val();
+        console.log(eventBlock2);
 
-        localStorage.setItem("eventBlock2");
+        localStorage.setItem("eventBlock2", JSON.stringify(eventBlock2));
     }
 
     function saveTimeblock3(event) {
         event.stopPropagation();
-        var val = $(this).closest("div.input-group").find("input[name='eventValue']").val();
-        console.log(val);
+        var eventBlock3 = $(this).closest("div.input-group").find("input[name='eventValue']").val();
+        console.log(eventBlock3);
 
-        localStorage.setItem("eventBlock3");
+        localStorage.setItem("eventBlock3", JSON.stringify(eventBlock3));
     }
 
     function saveTimeblock4(event) {
         event.stopPropagation();
-        var val = $(this).closest("div.input-group").find("input[name='eventValue']").val();
-        console.log(val);
+        var eventBlock4 = $(this).closest("div.input-group").find("input[name='eventValue']").val();
+        console.log(eventBlock4);
 
-        localStorage.setItem("eventBlock4");
+        localStorage.setItem("eventBlock4", JSON.stringify(eventBlock4));
     }
 
     function saveTimeblock5(event) {
         event.stopPropagation();
-        var val = $(this).closest("div.input-group").find("input[name='eventValue']").val();
-        console.log(val);
+        var eventBlock5 = $(this).closest("div.input-group").find("input[name='eventValue']").val();
+        console.log(eventBlock5);
 
-        localStorage.setItem("eventBlock5");
+        localStorage.setItem("eventBlock5", JSON.stringify(eventBlock5));
     }
 
     function saveTimeblock6(event) {
         event.stopPropagation();
-        var val = $(this).closest("div.input-group").find("input[name='eventValue']").val();
-        console.log(val);
+        var eventBlock6 = $(this).closest("div.input-group").find("input[name='eventValue']").val();
+        console.log(eventBlock6);
 
-        localStorage.setItem("eventBlock6");
+        localStorage.setItem("eventBlock6", JSON.stringify(eventBlock6));
     }
 
     function saveTimeblock7(event) {
         event.stopPropagation();
-        var val = $(this).closest("div.input-group").find("input[name='eventValue']").val();
-        console.log(val);
+        var eventBlock7 = $(this).closest("div.input-group").find("input[name='eventValue']").val();
+        console.log(eventBlock7);
 
-        localStorage.setItem("eventBlock7");
+        localStorage.setItem("eventBlock7", JSON.stringify(eventBlock7));
     }
 
     function saveTimeblock8(event) {
         event.stopPropagation();
-        var val = $(this).closest("div.input-group").find("input[name='eventValue']").val();
-        console.log(val);
+        var eventBlock8 = $(this).closest("div.input-group").find("input[name='eventValue']").val();
+        console.log(eventBlock8);
 
-        localStorage.setItem("eventBlock8");
+        localStorage.setItem("eventBlock8", JSON.stringify(eventBlock8));
     }
 
     function saveTimeblock9(event) {
         event.stopPropagation();
-        var val = $(this).closest("div.input-group").find("input[name='eventValue']").val();
-        console.log(val);
+        var eventBlock9 = $(this).closest("div.input-group").find("input[name='eventValue']").val();
+        console.log(eventBlock9);
 
-        localStorage.setItem("eventBlock9");
+        localStorage.setItem("eventBlock9", JSON.stringify(eventBlock9));
     }
 
+var inputText1 = document.querySelector('.block1');
+var inputText2 = document.querySelector('.block2');
+var inputText3 = document.querySelector('.block3');
+var inputText4 = document.querySelector('.block4');
+var inputText5 = document.querySelector('.block5');
+var inputText6 = document.querySelector('.block6');
+var inputText7 = document.querySelector('.block7');
+var inputText8 = document.querySelector('.block8');
+var inputText9 = document.querySelector('.block9');
+
+
+
+function renderEvents() {
+    var storedEvent1 = JSON.parse(localStorage.getItem("eventBlock1"));
+        inputText1.value = storedEvent1;
+
+    var storedEvent2 = JSON.parse(localStorage.getItem("eventBlock2"));
+        inputText2.value = storedEvent2;
+
+    var storedEvent3 = JSON.parse(localStorage.getItem("eventBlock3"));
+        inputText3.value = storedEvent3;
+
+    var storedEvent4 = JSON.parse(localStorage.getItem("eventBlock4"));
+        inputText4.value = storedEvent4;
+
+    var storedEvent5 = JSON.parse(localStorage.getItem("eventBlock5"));
+        inputText5.value = storedEvent5;
+
+    var storedEvent6 = JSON.parse(localStorage.getItem("eventBlock6"));
+        inputText6.value = storedEvent6;
+
+    var storedEvent7 = JSON.parse(localStorage.getItem("eventBlock7"));
+        inputText7.value = storedEvent7;
+
+    var storedEvent8 = JSON.parse(localStorage.getItem("eventBlock8"));
+        inputText8.value = storedEvent8;
+
+    var storedEvent9 = JSON.parse(localStorage.getItem("eventBlock9"));
+        inputText9.value = storedEvent9;
+}
+
+init();
