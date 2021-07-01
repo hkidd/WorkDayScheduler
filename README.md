@@ -1,6 +1,8 @@
 # WorkDayScheduler_HW5
 Simple planner application that allows a user to save events for each hour of the day by modifying starter code. <br>
 
+Link to deployed webpage: https://hkidd.github.io/WorkDayScheduler_HW5/
+
 ## Purpose
 The purpose of this homework assignment was to build a functional work day planner with timeblocks for each hour that change color depending on the time of day.  This activity relied heavily on getting JavaScript, jQuery, Bootstrap, and Moment.js working together correctly along with saving to local storage.<br>
 
