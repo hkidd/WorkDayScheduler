@@ -13,32 +13,44 @@ $('#currentDay').text(currentDay);
     var hour = moment().format("k");
     console.log(hour);
 
+    // var hour = 12;
+
     var timeblocks = [];
     timeblocks = document.querySelectorAll('.eventInput[data-time]');
-    // console.log(timeblocks.value);
+    
+    var length = timeblocks.length;
+
+    // QuerySelectorAll does not return an array because its a browser method.  Must be converted!
+    var timeArray = Array.from(timeblocks);
+    console.log(timeArray);
 
     function bckgrdColor(array) {
-        for (var i = 0; i < (array.length); i++)
-            if (array[i].value < hour) {
-                console.log(array[i]);
+
+        for (let i = 0; i < length; i++)
+            if (parseInt(array[i].dataset.time) < hour) 
+            {
+                console.log(array[i].dataset.time);
                 array[i].style.backgroundColor = "#d3d3d3";
                 array[i].style.color = "black";
-            } else if (array[i].value == hour) {
+            } 
+            else if (parseInt(array[i].dataset.time) == hour) 
+            {
                 array[i].style.backgroundColor = "#ff6961";
                 array[i].style.color = "black";
-                console.log(array[i]);
-            } else {
+                console.log(array[i].dataset.time);
+            } 
+            else 
+            {
                 array[i].style.backgroundColor = "#77dd77";
                 array[i].style.color = "black";
-            console.log(array[i]);
-        }
+                console.log(array[i].dataset.time);
+            }
     }
 
-bckgrdColor(timeblocks);
+bckgrdColor(timeArray);
 
 // Clicking a timeblock allows text entry (event listeners and updating text content)
-
-
+    // Using bootstrap input forms
 
 
 // Save button located on right side of text area to save each timeblocks events to local storage
