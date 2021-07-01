@@ -10,6 +10,25 @@ $('#currentDay').text(currentDay);
     // If hour has not yet been reached (more than) background color is green
     // For loop with if else statements to change attributes
 
+    var hour = moment().format("k");
+    console.log(hour);
+
+    var timeblocks = document.querySelectorAll('.eventInput[data-time]');
+    console.log(timeblocks);
+
+    function bckgrdColor() {
+        for (var i = 0; i < timeblocks.length; i++)
+            if (timeblocks[i].dataset.time < hour) {
+                timeblocks[i].style.backgroundColor = "gray";
+                
+            } else if (timeblocks[i].dataset.time == hour) {
+                timeblocks[i].style.backgroundColor = "red";
+            } else {
+                timeblocks[i].style.backgroundColor = "green";
+        }
+    }
+
+bckgrdColor();
 
 // Clicking a timeblock allows text entry (event listeners and updating text content)
 
@@ -19,4 +38,5 @@ $('#currentDay').text(currentDay);
 // Save button located on right side of text area to save each timeblocks events to local storage
     // Clicking the save button saves that block to local storage
     // setItem (saving) and getItem (retrieval upon page reload)
+    // Grab eventInput value and save to local storage
 

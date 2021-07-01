@@ -37,11 +37,13 @@ textarea {
 .row {
   white-space: pre-wrap;
   height: 80px;
+  color: black;
   border-top: 1px solid white;
 }
 
 .eventInput {
   height: 100%;
+  color: black;
   display: inline-flex;
   flex-wrap: nowrap;
   margin: 0;
