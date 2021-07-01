@@ -13,22 +13,28 @@ $('#currentDay').text(currentDay);
     var hour = moment().format("k");
     console.log(hour);
 
-    var timeblocks = document.querySelectorAll('.eventInput[data-time]');
-    console.log(timeblocks);
+    var timeblocks = [];
+    timeblocks = document.querySelectorAll('.eventInput[data-time]');
+    // console.log(timeblocks.value);
 
-    function bckgrdColor() {
-        for (var i = 0; i < timeblocks.length; i++)
-            if (timeblocks[i].dataset.time < hour) {
-                timeblocks[i].style.backgroundColor = "gray";
-                
-            } else if (timeblocks[i].dataset.time == hour) {
-                timeblocks[i].style.backgroundColor = "red";
+    function bckgrdColor(array) {
+        for (var i = 0; i < (array.length); i++)
+            if (array[i].value < hour) {
+                console.log(array[i]);
+                array[i].style.backgroundColor = "#d3d3d3";
+                array[i].style.color = "black";
+            } else if (array[i].value == hour) {
+                array[i].style.backgroundColor = "#ff6961";
+                array[i].style.color = "black";
+                console.log(array[i]);
             } else {
-                timeblocks[i].style.backgroundColor = "green";
+                array[i].style.backgroundColor = "#77dd77";
+                array[i].style.color = "black";
+            console.log(array[i]);
         }
     }
 
-bckgrdColor();
+bckgrdColor(timeblocks);
 
 // Clicking a timeblock allows text entry (event listeners and updating text content)
 
