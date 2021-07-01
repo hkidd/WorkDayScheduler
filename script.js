@@ -1,6 +1,8 @@
 // Init function runs on page load and calls the renderEvents function
 function init() {
     renderEvents();
+    // The background color function is called using the timeblock array declared below
+    bckgrdColor(timeArray);
 }
 
 // Using Moment, current day is placed in the jumbotron
@@ -49,7 +51,7 @@ function bckgrdColor(array) {
 }
 
 // The background color function is called using the timeblock array declared above
-bckgrdColor(timeArray);
+// bckgrdColor(timeArray);
 
 
 // VARIABLES AND FUNCTIONS FOR SAVING AND RETRIEVAL OF EVENT DETAILS
@@ -80,6 +82,7 @@ bckgrdColor(timeArray);
     saveBtn8.addEventListener("click", saveTimeblock8);
     saveBtn9.addEventListener("click", saveTimeblock9);
 
+    // This function uses a bit of jQuery to look for the closest input div to the click target, and then grabs the value from the input field
     function saveTimeblock1(event) {
         event.preventDefault();
         event.stopPropagation();
