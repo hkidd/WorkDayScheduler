@@ -38,6 +38,7 @@ Representative screenshot if the time of day was 12pm (hour 12):
 
 ![Planner Example](./images/PlannerEx12.png)
 <br>
+
 ## End result
 Using Moment.js, the time of day (hour) is accurately represented using the displayed timeblocks after looping through them all.<br>
 
