@@ -1,4 +1,4 @@
-# WorkDayScheduler_HW5
+# WorkDayScheduler
 Simple planner application that allows a user to save events for each hour of the day by modifying starter code. <br>
 
 Link to deployed webpage: https://hkidd.github.io/WorkDayScheduler_HW5/
